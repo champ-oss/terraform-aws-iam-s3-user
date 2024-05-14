@@ -9,7 +9,7 @@ output "s3_secret_access_key" {
   sensitive   = true
 }
 
-output "s3_bucket_name" {
+output "s3_bucket" {
   value = module.s3.bucket
   description = "The name of the S3 bucket"
 }
