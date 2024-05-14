@@ -8,3 +8,8 @@ output "s3_secret_access_key" {
   description = "The secret access key for the S3 bucket"
   sensitive   = true
 }
+
+output "s3_bucket" {
+  value = module.s3.bucket
+  description = "The name of the S3 bucket"
+}
