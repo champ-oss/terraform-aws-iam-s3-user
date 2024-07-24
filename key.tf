@@ -1,3 +1,4 @@
 resource "aws_iam_access_key" "this" {
-  user = aws_iam_user.this.name
+  count = var.enabled ? 1 : 0
+  user  = aws_iam_user.this[0].name
 }
