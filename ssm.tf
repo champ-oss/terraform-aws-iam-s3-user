@@ -5,7 +5,7 @@ resource "aws_ssm_parameter" "this" {
   type        = "SecureString"
   value       = aws_iam_access_key.this[0].secret
   tags = merge({
-    s3_bucket = module.s3[0].bucket
+    s3_bucket = module.s3.bucket
   }, local.tags, var.tags)
 
   lifecycle {
