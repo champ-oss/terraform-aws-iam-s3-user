@@ -15,7 +15,7 @@ moved {
 
 moved {
   from = aws_iam_user_policy.this
-  to   = [aws_iam_user_policy.this[0]]
+  to   = aws_iam_user_policy.this[0]
 }
 
 moved {
